@@ -27,8 +27,11 @@ def get_aqi_category(prediction):
     elif prediction <= 400: return "Very Poor", "#ef4444"
     else: return "Severe", "#7f1d1d"
 
-@app.route('/', methods=['GET'])
-def health():
+# Updated the root route to handle BOTH Get (health check) and POST (prediction fallback)
+@app.route('/', methods=['GET', 'POST'])
+def handle_root():
+    if request.method == 'POST':
+        return predict()
     return "API is Online"
 
 @app.route('/predict', methods=['POST'])
@@ -48,7 +51,7 @@ def predict():
         if city_col in col_map:
             input_data[col_map[city_col]] = 1
         else:
-            return jsonify({"error": "City not supported"}), 400
+            return jsonify({"error": f"City '{data.get('city')}' not supported"}), 400
 
         # Run prediction
         prediction = float(loaded_model.predict(input_data.reshape(1, -1))[0])
