@@ -1,5 +1,10 @@
-# 🌫️ AQI Prediction Project
+# 🌬️ Air Quality Index (AQI) Prediction System
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Machine--Learning-Advanced-blue?style=for-the-badge&logo=machine-learning" alt="ML">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Flask-Web--App-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+</p>
 A Machine Learning project that analyzes air pollution data and predicts the **Air Quality Index (AQI)** using multiple machine learning algorithms.
 
 This project demonstrates the complete **data science workflow**, including:
@@ -13,14 +18,24 @@ This project demonstrates the complete **data science workflow**, including:
 
 ---
 
+
+
 # 📌 Project Overview
 
 Air pollution is one of the biggest environmental challenges today.  
 The **Air Quality Index (AQI)** is used to measure how polluted the air is and its impact on human health.
+Predicting the Air Quality Index (AQI) is critical for public health and urban planning. This project provides an end-to-end solution—from automated data collection via web scraping to a deployed web interface—allowing users to predict AQI levels based on real-time meteorological parameters.
 
 This project applies different **Machine Learning algorithms** to predict AQI values using environmental and pollution data.
 
 ---
+## 🖼️ App Preview
+
+| Home Page | Prediction Result | 
+| ----- | ----- | 
+| ![Home Screenshot](https://via.placeholder.com/400x250?text=App+Home+Interface) | ![Result Screenshot](https://via.placeholder.com/400x250?text=Prediction+Result+UI) | 
+| *Intuitive Dashboard* | *Instant AQI Analysis* |
+
 
 # ⚙️ Technologies Used
 
@@ -34,36 +49,19 @@ This project applies different **Machine Learning algorithms** to predict AQI va
 
 ---
 
-# 📂 Project Structure
+## 📁 Project Structure
 
-AQI-Project
-
-│
-
-├── AQI_Forecasting.pkl
-
-├── Final_AQI_ML.ipynb
-
-├── app.py
-
-├── background.jpg
-
-├── index.html
-
-├── model_columns.pkl
-
-├── requirements.txt
-
-├── station_day.csv
-
-├── stations.csv
-
-│
-
-└── README.md
-
-
-
+```text
+AQI-Project/
+├── Data/                   # Raw & Cleaned CSV Datasets
+├── Notebooks/              # EDA, Model Training, & Evaluation
+├── static/                 # Stylesheets & Brand Assets
+├── templates/              # Flask Jinja2 Templates
+├── app.py                  # Backend Logic & API Routes
+├── model.pkl               # Optimized Saved Model
+├── requirements.txt        # Production Dependencies
+└── README.md               # Project Documentation
+```
 ---
 
 # 🧠 Machine Learning Models Used
@@ -102,6 +100,20 @@ Training multiple machine learning models using the dataset.
 Comparing models based on prediction accuracy.
 
 ---
+
+### 🧠 Machine Learning Pipeline
+Our system follows a robust data science lifecycle to ensure high accuracy and reliability:
+
+```mermaid
+graph LR
+    A[Data Scraping] --> B[Feature Engineering]
+    B --> C[Outlier Handling]
+    C --> D[Model Comparison]
+    D --> E[Hyperparameter Tuning]
+    E --> F[Model Deployment]
+    F --> G[Flask Web App]
+```
+
 
 # 🚀 How to Run the Project
 
