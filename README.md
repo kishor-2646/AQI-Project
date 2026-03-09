@@ -33,7 +33,7 @@ This project applies different **Machine Learning algorithms** to predict AQI va
 
 | Home Page | Prediction Result | 
 | ----- | ----- | 
-| ![Home Screenshot](https://via.placeholder.com/400x250?text=App+Home+Interface) | ![Result Screenshot](https://via.placeholder.com/400x250?text=Prediction+Result+UI) | 
+| ![Home Screenshot](assets/dashboard.png) | ![Result Screenshot](assets/result.jpeg) | 
 | *Intuitive Dashboard* | *Instant AQI Analysis* |
 
 
@@ -53,6 +53,7 @@ This project applies different **Machine Learning algorithms** to predict AQI va
 
 ```text
 AQI-Project/
+├── assets/                 # App Screenshots & Graphics
 ├── Data/                   # Raw & Cleaned CSV Datasets
 ├── Notebooks/              # EDA, Model Training, & Evaluation
 ├── static/                 # Stylesheets & Brand Assets
